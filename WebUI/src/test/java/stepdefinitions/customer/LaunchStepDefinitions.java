@@ -1,6 +1,6 @@
 package stepdefinitions.customer;
 
-import model.CustomerInfo;
+import model.Context;
 import questions.customer.GetCustomerInfo;
 import tasks.customer.messagenow.NavigateTo;
 import tasks.customer.messagenow.OpenChatWindow;
@@ -27,7 +27,7 @@ public class LaunchStepDefinitions {
     public void sendMessage(Actor actor,String message,String agent) {
 
         actor.attemptsTo(OpenChatWindow.sendMessage(message));
-        actor.remember("customerInfo", new GetCustomerInfo());
+        actor.remember(Context.CUSTOMER_INFO, new GetCustomerInfo());
         // System.out.println(((CustomerInfo) actor.recall("customerInfo")).getFirstName());
     }
 

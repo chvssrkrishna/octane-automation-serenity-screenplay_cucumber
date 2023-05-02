@@ -34,6 +34,4 @@ public class HomePage {
     public static Target CHATPANEL_SEND_BUTTON = Target.the("Chat Panel Send Button").locatedBy("css: button[aria-label='Send']");
 
 
-
-
 }
