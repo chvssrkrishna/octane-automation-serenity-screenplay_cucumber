@@ -16,19 +16,19 @@ public class DealerConfigFileReader {
     }
 
     public String getAgentUserName(String dealer, String agent) {
-        return null;
+        return prop.getProperty(dealer + "." + agent + ".Username");
     }
 
     public String getAgentPassword(String dealer, String agent) {
-        return null;
+        return prop.getProperty(dealer + "." + agent + ".Password");
     }
 
     public String getDealerID(String dealer) {
-        return null;
+        return prop.getProperty(dealer + ".id");
     }
 
-    public String getDealerName(String dealer, String customer) {
-        return null;
+    public String getDealerName(String dealer) {
+        return prop.getProperty(dealer + ".name");
     }
 
 

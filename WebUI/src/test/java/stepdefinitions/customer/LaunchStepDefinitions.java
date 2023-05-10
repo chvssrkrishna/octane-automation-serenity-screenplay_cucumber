@@ -13,16 +13,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 
-public class LaunchStepDefinitions {
+public class LaunchStepDefinitions extends PageStepDefinitions {
 
-    @Given("{actor} launch home page of dealer {string}")
+    @Given("{actor} launch customer home page of dealer {string}")
     public void researchingThings(Actor actor,String dealer) {
-        EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();
-        String environment = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("environment");
-        String env= FileReaderManager.getInstance().getDealerConfigFileReader(environment).getDealerID(dealer);
-        System.out.println("env : "+env);
-        String url = "https://devint.carnow.com/dealers/37550/demo?clear=1";
-        actor.wasAbleTo(NavigateTo.theCustomerHomePage(url));
+        actor.wasAbleTo(NavigateTo.theCustomerHomePage(getCustomerUrl(dealer)));
     }
 
     @When("{actor} open chat panel from {string} Icon Button")

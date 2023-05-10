@@ -4,6 +4,7 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.questions.Displayed;
 import net.serenitybdd.screenplay.questions.Presence;
+import net.serenitybdd.screenplay.questions.Visibility;
 import org.checkerframework.checker.optional.qual.Present;
 import pageobjects.customer.messagenow.HomePage;
 import net.serenitybdd.screenplay.Performable;
@@ -24,7 +25,7 @@ public class OpenChatWindow {
         return Task.where(
                 "{0} open Chat Window by Clicking on " + button,
                 Click.on(HomePage.CHAT_ICON_BUTTON),
-                OpenChatWindow.waitForElementToDisplayed(HomePage.CHATPANEL_IFRAME),
+                OpenChatWindow.waitForElementVisibility(HomePage.CHATPANEL_IFRAME),
                 Switch.toFrame(HomePage.CHATPANEL_IFRAME_NAME)
 
         );
@@ -35,7 +36,7 @@ public class OpenChatWindow {
         return Task.where(
                 "{0} customer sent message " + message,
                 Check.whether(Presence.of(HomePage.CHATPANEL_DEPARTMENT_SELECTOR.waitingForNoMoreThan(Duration.ofSeconds(10)))).andIfSo(Click.on(HomePage.CHATPANEL_DEPARTMENT_SELECTOR)),
-                OpenChatWindow.waitForElementToDisplayed(HomePage.CHATPANEL_ENTER_YOUR_MESSAGE),
+                OpenChatWindow.waitForElementVisibility(HomePage.CHATPANEL_ENTER_YOUR_MESSAGE),
                 Enter.theValue(message).into(HomePage.CHATPANEL_ENTER_YOUR_MESSAGE),
                 Click.on(HomePage.CHATPANEL_SEND_BUTTON),
                 WaitUntil.the(HomePage.CHATPANEL_SEND_BUTTON, isVisible()).forNoMoreThan(10).seconds()
@@ -45,14 +46,14 @@ public class OpenChatWindow {
 
     }
 
-    public static Performable waitForElementToDisplayed(Target target) {
+    public static Performable waitForElementVisibility(Target target) {
         return Task.where("{0} wait till " + target.getName() + " visible",
                 actor -> {
                     /*actor.attemptsTo(
                             WaitUntil.the(target, isVisible()).forNoMoreThan(10).seconds()
                     );*/
-                    boolean isDisplayed = actor.asksFor(Displayed.of(target));
-
+                    boolean isDisplayed = actor.asksFor(Visibility.of(target.waitingForNoMoreThan(Duration.ofSeconds(10))));
+                    System.out.println("flag "+isDisplayed);
                 }
         );
     }
