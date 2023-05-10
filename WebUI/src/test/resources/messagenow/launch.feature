@@ -8,5 +8,5 @@ Feature:launch feature
 
     Examples:
     |dealer|
-    |37550 |
+    |krishna_toyota |
 

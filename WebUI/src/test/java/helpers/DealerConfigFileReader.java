@@ -9,7 +9,7 @@ public class DealerConfigFileReader {
     public DealerConfigFileReader(String environment) {
         prop = new Properties();
         try {
-            prop.load(ResourceHelper.getResourcePathInputStream("/src/main/resources/" + environment + ".properties"));
+            prop.load(ResourceHelper.getResourcePathInputStream("/src/test/resources/" + environment + ".properties"));
         } catch (Exception e) {
             e.printStackTrace();
         }
