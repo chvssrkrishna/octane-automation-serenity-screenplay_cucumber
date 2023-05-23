@@ -1,4 +1,4 @@
-package helpers;
+package helpers.filereader;
 
 import java.util.Properties;
 

@@ -1,11 +1,9 @@
 package stepdefinitions.customer;
 
-import helpers.FileReaderManager;
 import model.Context;
-import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
-import net.thucydides.core.environment.SystemEnvironmentVariables;
-import net.thucydides.core.util.EnvironmentVariables;
 import questions.customer.GetCustomerInfo;
+import stepdefinitions.PageStepDefinitions;
+import tasks.customer.messagenow.ChatPanel;
 import tasks.customer.messagenow.NavigateTo;
 import tasks.customer.messagenow.OpenChatWindow;
 import io.cucumber.java.en.Given;
@@ -29,7 +27,7 @@ public class LaunchStepDefinitions extends PageStepDefinitions {
     @Then("{actor} send {string} message to {string}")
     public void sendMessage(Actor actor,String message,String agent) {
 
-        actor.attemptsTo(OpenChatWindow.sendMessage(message));
+        actor.attemptsTo(ChatPanel.sendMessage(message));
         actor.remember(Context.CUSTOMER_INFO, new GetCustomerInfo());
         // System.out.println(((CustomerInfo) actor.recall("customerInfo")).getFirstName());
     }

@@ -1,4 +1,4 @@
-package helpers;
+package helpers.filereader;
 
 import java.io.File;
 import java.io.FileInputStream;

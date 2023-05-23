@@ -1,6 +1,6 @@
-package stepdefinitions.customer;
+package stepdefinitions;
 
-import helpers.FileReaderManager;
+import helpers.filereader.FileReaderManager;
 import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;
 import net.thucydides.core.environment.SystemEnvironmentVariables;
 import net.thucydides.core.util.EnvironmentVariables;
