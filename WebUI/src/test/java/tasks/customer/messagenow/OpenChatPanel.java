@@ -2,12 +2,12 @@ package tasks.customer.messagenow;
 
 import helpers.constants.WaitConstants;
 import helpers.wait.WaitForElement;
-import pageobjects.customer.messagenow.HomePage;
+import user_interface.customer.messagenow.HomePage;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Switch;
 
-public class OpenChatWindow {
+public class OpenChatPanel {
 
     public static Task via(String button) {
         return Task.where(

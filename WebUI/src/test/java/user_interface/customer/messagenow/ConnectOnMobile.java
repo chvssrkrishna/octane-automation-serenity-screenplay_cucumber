@@ -1,4 +1,4 @@
-package pageobjects.customer.messagenow;
+package user_interface.customer.messagenow;
 
 import net.serenitybdd.screenplay.targets.Target;
 

@@ -8,15 +8,15 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.questions.Presence;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import pageobjects.customer.messagenow.HomePage;
+import user_interface.customer.messagenow.HomePage;
 
 import java.time.Duration;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class ChatPanel {
+public class Message {
 
-    public static Task sendMessage(String message) {
+    public static Task sentT(String message) {
         return Task.where(
                 "{0} customer sent message " + message,
                 Check.whether(Presence.of(HomePage.CHATPANEL_DEPARTMENT_SELECTOR.waitingForNoMoreThan(Duration.ofSeconds(10)))).andIfSo(Click.on(HomePage.CHATPANEL_DEPARTMENT_SELECTOR)),

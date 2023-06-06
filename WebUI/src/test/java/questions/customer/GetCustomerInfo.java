@@ -1,11 +1,9 @@
 package questions.customer;
 
 import model.CustomerInfo;
-import pageobjects.customer.messagenow.HomePage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.annotations.Subject;
-import net.serenitybdd.screenplay.questions.Text;
 
 @Subject("the displayed username")
 public class GetCustomerInfo implements Question<CustomerInfo>{
