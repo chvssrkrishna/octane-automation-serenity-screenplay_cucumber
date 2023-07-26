@@ -1,4 +1,4 @@
-package tasks.customer.messagenow;
+package tasks.generic;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;

@@ -5,11 +5,11 @@ import net.serenitybdd.screenplay.Question;
 public class CustomerInfo {
     String firstName;
     String lastName;
-    Double phone;
+    String phone;
     String email;
     String zipcode;
 
-    public CustomerInfo(String firstName, String lastName, Double phone, String email, String zipcode) {
+    public CustomerInfo(String firstName, String lastName, String phone, String email, String zipcode) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
@@ -33,11 +33,11 @@ public class CustomerInfo {
         this.lastName = lastName;
     }
 
-    public Double getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(double phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

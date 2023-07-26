@@ -6,13 +6,12 @@ import net.serenitybdd.screenplay.targets.Target;
 public class HomePage {
 
     //Icon Buttons in Customer Home Page
+    public static Target ICON_BUTTON = Target.the("{0} Icon Button").locatedBy("div.desktop a[data-name='{0} Icon Button']");
     public static Target CHAT_ICON_BUTTON = Target.the("Chat Icon Button").locatedBy("div.desktop a[data-name='Chat Icon Button']");
     public static Target TEXT_ICON_BUTTON = Target.the("Text Icon Button").locatedBy("div.desktop a[data-name='Text Icon Button']");
     public static Target CALL_ICON_BUTTON = Target.the("Call Icon Button").locatedBy("div.desktop a[data-name='Text Icon Button']");
     public static Target OFFERS_ICON_BUTTON = Target.the("Offers Icon Button").locatedBy("div.desktop a[aria-label='Offers']");
     public static Target VIEW_INVENTORY_BUTTON = Target.the("View Inventory Button").locatedBy("a.inventory-link");
-    public static Target CLOSE_CHAT_PANEL_BUTTON = Target.the("View Inventory Link").locatedBy("div.desktop a[aria-label='Close']:not([class*='disabled'])");
-
 
     //Auto Poke Window
     public static Target AUTO_POKE_FORM = Target.the("Auto Poke Form").locatedBy("form#cnpoke");
@@ -27,11 +26,10 @@ public class HomePage {
 
     public static String CHATPANEL_IFRAME_NAME = "Chat";
 
-    public static Target CHATPANEL_DEPARTMENT_SELECTOR  = Target.the("Chat Panel Department Selector").locatedBy("xpath: //button[text()='New Car Sales']");
+    public static Target CHATPANEL_DEPARTMENT_SELECTOR  = Target.the("Chat Panel Department Selector {0}").locatedBy("xpath: //button[text()='{0}']");
 
-    public static Target CHATPANEL_ENTER_YOUR_MESSAGE = Target.the("Chat Panel Enter Your Message").locatedBy("css: input[placeholder='Enter your message']");
+    public static Target CLOSE_CHAT_PANEL_BUTTON = Target.the("View Inventory Link").locatedBy("div.desktop a[aria-label='Close']:not([class*='disabled'])");
 
-    public static Target CHATPANEL_SEND_BUTTON = Target.the("Chat Panel Send Button").locatedBy("css: button[aria-label='Send']");
 
 
 }

@@ -1,8 +1,8 @@
 package stepdefinitions.customer.messagenow;
 
 import stepdefinitions.PageStepDefinitions;
-import tasks.customer.messagenow.NavigateTo;
-import tasks.customer.messagenow.OpenChatPanel;
+import tasks.generic.NavigateTo;
+import tasks.customer.messagenow.ChatPanel;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
@@ -17,7 +17,7 @@ public class HomePageStepDefinitions extends PageStepDefinitions {
     @When("{actor} open chat panel from {string} Icon Button")
     public void openChatPanel(Actor actor,String button) {
 
-        actor.attemptsTo(OpenChatPanel.via(button));
+        actor.attemptsTo(ChatPanel.openVia(button));
     }
 
 
