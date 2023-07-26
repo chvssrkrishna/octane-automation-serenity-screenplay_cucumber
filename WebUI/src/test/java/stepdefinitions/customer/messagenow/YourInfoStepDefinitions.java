@@ -2,21 +2,19 @@ package stepdefinitions.customer.messagenow;
 
 import io.cucumber.java.en.Then;
 import model.Context;
-import model.CustomerInfo;
+import model.ContactInfo;
 import net.serenitybdd.screenplay.Actor;
-import questions.customer.GetCustomerInfo;
 import stepdefinitions.PageStepDefinitions;
-import tasks.customer.messagenow.Message;
-import tasks.customer.messagenow.YourInfo;
-import tasks.generic.ContactInfo;
+import tasks.customer.messagenow.Send;
+import tasks.generic.Generate;
 
 public class YourInfoStepDefinitions extends PageStepDefinitions {
 
     @Then("{actor} submit contact information")
     public void submitContactInformation(Actor actor) {
-        CustomerInfo customerInfo = ContactInfo.generateFakeCustomerContactInfo();
-        actor.remember(Context.CUSTOMER_INFO, customerInfo);
-        actor.attemptsTo(YourInfo.submitContactInfo(customerInfo));
-        //System.out.println("Customer Name : "+((CustomerInfo) actor.recall(Context.CUSTOMER_INFO)).getFirstName());
+        ContactInfo contactInfo = Generate.fakeCustomerContactInfo();
+        actor.remember(Context.CONTACT_INFO, contactInfo);
+        actor.attemptsTo(Send.contactInfo(contactInfo));
+        //sytem.out.println("Customer Name : "+((ContactInfo) actor.recall(Context.CONTACT_INFO)).getFirstName());
     }
 }

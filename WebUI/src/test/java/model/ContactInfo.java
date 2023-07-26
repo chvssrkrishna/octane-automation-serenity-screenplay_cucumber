@@ -1,15 +1,13 @@
 package model;
 
-import net.serenitybdd.screenplay.Question;
-
-public class CustomerInfo {
+public class ContactInfo {
     String firstName;
     String lastName;
     String phone;
     String email;
     String zipcode;
 
-    public CustomerInfo(String firstName, String lastName, String phone, String email, String zipcode) {
+    public ContactInfo(String firstName, String lastName, String phone, String email, String zipcode) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
