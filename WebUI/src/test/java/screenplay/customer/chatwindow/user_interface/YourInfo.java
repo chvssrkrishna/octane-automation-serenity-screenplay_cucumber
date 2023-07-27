@@ -1,4 +1,4 @@
-package user_interface.customer.messagenow;
+package screenplay.customer.chatwindow.user_interface;
 
 import net.serenitybdd.screenplay.targets.Target;
 

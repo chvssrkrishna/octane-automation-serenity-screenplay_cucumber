@@ -1,9 +1,9 @@
-package stepdefinitions.customer.messagenow;
+package screenplay.customer.chatwindow.stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.Actor;
-import stepdefinitions.PageStepDefinitions;
-import tasks.customer.messagenow.Send;
+import screenplay.common.stepdefinitions.PageStepDefinitions;
+import screenplay.customer.chatwindow.tasks.Send;
 
 public class ChatPanelStepDefinitions extends PageStepDefinitions {
 

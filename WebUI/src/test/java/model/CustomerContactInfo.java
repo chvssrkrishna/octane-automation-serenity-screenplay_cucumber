@@ -1,13 +1,13 @@
 package model;
 
-public class ContactInfo {
+public class CustomerContactInfo {
     String firstName;
     String lastName;
     String phone;
     String email;
     String zipcode;
 
-    public ContactInfo(String firstName, String lastName, String phone, String email, String zipcode) {
+    public CustomerContactInfo(String firstName, String lastName, String phone, String email, String zipcode) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;

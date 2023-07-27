@@ -1,4 +1,4 @@
-package stepdefinitions;
+package screenplay.common.stepdefinitions;
 
 import helpers.filereader.FileReaderManager;
 import net.serenitybdd.core.environment.EnvironmentSpecificConfiguration;

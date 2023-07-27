@@ -1,4 +1,4 @@
-package user_interface.customer.messagenow;
+package screenplay.customer.home.user_interface;
 
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.targets.Target;

@@ -1,13 +1,14 @@
-package tasks.customer.messagenow;
+package screenplay.customer.chatwindow.tasks;
 
 import helpers.constants.WaitConstants;
 import helpers.wait.WaitForElement;
-import model.ContactInfo;
+import model.CustomerContactInfo;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import user_interface.customer.messagenow.ChatPanel;
+import screenplay.customer.chatwindow.user_interface.ChatPanel;
+import screenplay.customer.chatwindow.user_interface.YourInfo;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotVisible;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
@@ -25,17 +26,17 @@ public class Send {
         );
 
     }
-    public static Task contactInfo(ContactInfo customerInfo) {
+    public static Task contactInfo(CustomerContactInfo customerInfo) {
         return Task.where(
                 "{0} submit contact info",
                 Click.on(ChatPanel.YOUR_INFO_BUTTON),
-                WaitForElement.visibility(user_interface.customer.messagenow.YourInfo.SUBMIT, WaitConstants.getExplicitWait()),
-                Enter.theValue(customerInfo.getFirstName()).into(user_interface.customer.messagenow.YourInfo.FIRST_NAME),
-                Enter.theValue(customerInfo.getLastName()).into(user_interface.customer.messagenow.YourInfo.LAST_NAME),
-                Enter.theValue(customerInfo.getPhone()).into(user_interface.customer.messagenow.YourInfo.PHONE),
-                Enter.theValue(customerInfo.getEmail()).into(user_interface.customer.messagenow.YourInfo.EMAIL),
-                Click.on(user_interface.customer.messagenow.YourInfo.SUBMIT),
-                WaitUntil.the(user_interface.customer.messagenow.YourInfo.SUBMIT, isNotVisible()).forNoMoreThan(10).seconds()
+                WaitForElement.visibility(YourInfo.SUBMIT, WaitConstants.getExplicitWait()),
+                Enter.theValue(customerInfo.getFirstName()).into(YourInfo.FIRST_NAME),
+                Enter.theValue(customerInfo.getLastName()).into(YourInfo.LAST_NAME),
+                Enter.theValue(customerInfo.getPhone()).into(YourInfo.PHONE),
+                Enter.theValue(customerInfo.getEmail()).into(YourInfo.EMAIL),
+                Click.on(YourInfo.SUBMIT),
+                WaitUntil.the(YourInfo.SUBMIT, isNotVisible()).forNoMoreThan(10).seconds()
         );
 
     }

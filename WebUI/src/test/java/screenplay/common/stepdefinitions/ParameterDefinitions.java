@@ -1,4 +1,4 @@
-package stepdefinitions;
+package screenplay.common.stepdefinitions;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.ParameterType;

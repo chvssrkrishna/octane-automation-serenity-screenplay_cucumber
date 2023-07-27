@@ -1,4 +1,4 @@
-package tasks.generic;
+package screenplay.common.tasks;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
