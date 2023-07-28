@@ -2,6 +2,8 @@
 Feature:launch feature
 #mvn clean verify -Dfailsafe.rerunFailingTestsCount=1 -Dtags="launch"
 # mvn clean verify -Dfailsafe.rerunFailingTestsCount=1 -Dtags="launch"  -Dserenity.outputDirectory=target/site/messagenow -Dserenity.project.name=messagenow
+# mvn clean verify -Dfailsafe.rerunFailingTestsCount=1 -Dcucumber.options="--tags @launch1"  -Dserenity.outputDirectory=target/site/messagenow -Dserenity.project.name=messagenow
+
   @launch1
   Scenario Outline: launch customer home page
     Given krishna launch customer home page of dealer "<dealer>"
