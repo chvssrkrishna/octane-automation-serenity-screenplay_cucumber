@@ -6,19 +6,19 @@ Feature:launch feature
 
   @launch1
   Scenario Outline: launch customer home page
-    Given krishna launch customer home page of dealer "<dealer>"
-    When krishna open chat panel from "Chat" Icon Button
-    Then krishna send "hello agent" message to dealer "<dealer>"
-    Then krishna submit contact information
+    Given sudheer launch customer home page of dealer "<dealer>"
+    When sudheer open chat panel from "Chat" Icon Button
+    Then sudheer send "hello agent" message to dealer "<dealer>"
+    Then sudheer submit contact information
 
     Examples:
       | dealer         |
       | krishna_toyota |
     @launch2
   Scenario Outline: launch customer home page Testing
-    Given krishna launch customer home page of dealer "<dealer>"
-    When krishna open chat panel from "Chat" Icon Button
-    Then krishna submit contact information
+    Given govardhan launch customer home page of dealer "<dealer>"
+    When govardhan open chat panel from "Chat" Icon Button
+    Then govardhan submit contact information
 
     Examples:
       | dealer         |
